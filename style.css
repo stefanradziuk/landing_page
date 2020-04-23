@@ -6,8 +6,11 @@ body {
   font-family: "Fira Code", monospace;
   font-weight: 300;
   font-size: calc(3em + 1vw);
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
-
 
 @media(hover) {
   body {
@@ -34,15 +37,23 @@ p {
   line-height: 1.2;
 }
 
+#fullsize {
+  align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 #container {
   align: center;
   max-width: min(800px, 90%);
   margin: 0 auto;
-  padding: 20px 50px 20px 50px;
+  padding: 28px 50px 28px 50px;
 }
 
-#menu {
-  font-weight: 700;
+#invisible {
+  color: rgba(0, 0, 0, 0);
 }
 
 .smiley {
@@ -52,7 +63,7 @@ p {
   transition-property: color;
 }
 
-.smiley:hover {
+*:hover .smiley {
   color: rgb(146, 180, 167);
 }
 
@@ -85,7 +96,7 @@ video {
 }
 
 a:link {
-  color: #757083;
+  color: inherit;
   font-weight: 700;
   text-decoration: none;
 }
@@ -97,11 +108,12 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: rgb(146, 180, 167);
+  color: inherit;
 }
 
 a:active {
   text-decoration: none;
+  color: inherit;
 }
 
 *:focus {
